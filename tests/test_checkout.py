@@ -1,8 +1,10 @@
+from pages.login_page import LoginPage
+
+
 def test_checkout(page):
-    page.goto("https://www.saucedemo.com")
-    page.fill("#user-name", "standard_user")
-    page.fill("#password", "secret_sauce")
-    page.click("#login-button")
+    login = LoginPage(page)
+    login.open()
+    login.login("standard_user", "secret_sauce")
     page.click("#add-to-cart-sauce-labs-backpack")
     page.click(".shopping_cart_link")
     page.click("#checkout")
