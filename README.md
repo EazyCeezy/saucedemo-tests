@@ -36,4 +36,7 @@ with CI running on GitHub's Ubuntu runners.
 
 ## Next
 - Cart Page Object
-- Run the suite inside a Docker container
+
+## Run in Docker
+    docker build -t saucedemo-tests .
+    docker run --rm saucedemo-tests
